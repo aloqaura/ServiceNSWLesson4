@@ -13,6 +13,7 @@
 /* 2 Create a function that takes 1 parameter that is an object with 2 properties, name and age. Return true 
 if the person's age is greater than 30 or their name contains the letter x (case insensitive). 
 Otherwise return false. */
+func
 
 
 let person1 = {
@@ -63,5 +64,49 @@ let person4 = {
     age: 45
 }
 
+// 3 Create a function that takes 3 parameters. The first should be an object with two properties name and age. The second should be a number, the third should be a string. The function should return true if the age of the object is equal to the second parameter and the name is not equal to the third parameter. Otherwise return false.
+function checkAgeNotName(person, age, nameNotToMatch) {
+    let ageMatch = person.age == age;
+    let namesMatch = person.name == nameNotToMatch;
+    if (ageMatch && !namesMatch) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
+let personLuke = {
+    name: "Luke",
+    age: 23
+};
+let ans = checkAgeNotName(personLuke, 24, "Luke")
+// console.log(ans);
+
+let pets = [
+    {
+        name: "Rex",
+        age: 4,
+        ownerName: "Luke"
+    }, {
+        name: "Spot",
+        age: 7,
+        ownerName: "Jade"
+    }, {
+        name: "Scooby",
+        age: 3,
+        ownerName: "Shaggy"
+    }, {
+        name: "Lucky",
+        age: 1,
+        ownerName: "Luke"
+    }, {
+        name: "Sadie",
+        age: 3,
+        ownerName: "Daniel"
+    }, {
+        name: "Duke",
+        age: 5,
+        ownerName: "Sabine"
+    }
+];
 
